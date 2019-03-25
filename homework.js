@@ -20,14 +20,14 @@ const callbacks = () => {
             const vehiclesObj = JSON.parse(body);
             const vehicleName = vehiclesObj.name;
             list.push(vehicleName);
+            if (vehicles.length === list.length) {
+              console.log("Luke's Whips:", list);
+            }
           }
         });
       });
     }
   });
-  setTimeout(() => {
-    console.log(list);
-  }, 3000);
 };
 
 // PROMISES
